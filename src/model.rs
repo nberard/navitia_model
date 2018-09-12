@@ -54,6 +54,27 @@ impl Collections {
     /// Merge the `Collections` parameter into the current `Collections` by consecutively merging
     /// each collections representing the model.  Fails in case of id collision.
     pub fn merge(&mut self, c: Collections) -> Result<()> {
+        let Collections {
+            contributors,
+            datasets,
+            networks,
+            commercial_modes,
+            lines,
+            routes,
+            vehicle_journeys,
+            physical_modes,
+            stop_areas,
+            stop_points,
+            feed_infos,
+            calendars,
+            companies,
+            comments,
+            equipments,
+            transfers,
+            trip_properties,
+            geometries,
+            admin_stations,
+        } = c;
         self.contributors.merge(c.contributors)?;
         self.datasets.merge(c.datasets)?;
         self.networks.merge(c.networks)?;
