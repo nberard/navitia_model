@@ -47,6 +47,7 @@ fn merge_collections_ok() {
     assert_eq!(collections.lines.len(), 6);
     assert_eq!(collections.routes.len(), 8);
     assert_eq!(collections.vehicle_journeys.len(), 8);
+    assert_eq!(collections.stop_time_headsigns.len(), 2);
     assert_eq!(collections.physical_modes.len(), 6);
     assert_eq!(collections.stop_areas.len(), 7);
     assert_eq!(collections.stop_points.len(), 12);
